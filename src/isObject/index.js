@@ -8,7 +8,7 @@
  * isObject(null); // false
  */
 const isObject = data => {
-if (typeof data == "object" && data != null) {
+if (typeof data == "object" && data != null && Array.isArray(data)==false  ) {
 	return true;
 }
 
