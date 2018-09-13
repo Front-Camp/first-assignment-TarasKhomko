@@ -7,13 +7,24 @@
 * max([-1, 0]);   // 0
 */
 const max = arr => {
-  let maxEl = max[0];
-  for(let i = 1; max.lenght; i++ ){
-  	if (max[i]> maxEl){
-  		maxEl = max[i];
-  	}
+
+
+ let newArr = arr.filter(function(number) {
+  return isFinite(number);});
+  let max = newArr[0];
+ for(let i=1; i<newArr.length; i++){
+ if( newArr[i] > max)  {
+ 	if(newArr[i] != NaN){
+ 		max = newArr[i];
+ 	}
+ 	
+   }
   }
-  return maxEl;
+
+
+return max;
+ 
+
 };
 
 export default max;
