@@ -12,16 +12,24 @@
  */
 const sumElements = arr => {
 let newArrs = []
-let newArr = arr.filter(function(number) {
-   	if(number != Infinity){
+let newArr = arr;
+  let sum = 0;
+ for(let i=0; i<newArr.length; i++){
+ 	if(!isNaN(newArr[i])){
+	newArrs.push(Number((newArr[i]))); 
+ 	} else {
+ 		newArrs.push(parseInt((newArr[i]))); 
+ 	}
+  }
+  let full = newArrs.filter(function(number) {
+   	if(number != Infinity && number !=NaN){
 		return number;
    	} 
 });
-  let sum = 0;
- for(let i=0; i<newArr.length; i++){
- 	sum += Number(newArr[i]); 
+ for(let i=0; i<full.length; i++){
+ 		sum += full[i];
   }
-   console.log(sum);
+
   return sum;
 };
 
