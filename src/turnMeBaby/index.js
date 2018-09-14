@@ -9,8 +9,8 @@
  */
 const turnMeBaby = str => {
 	
-	if (typeof str === "string" || str.length != 0) {
- return str.split('').reverse().join('');
+	if (typeof str === "string" || str.length != 0 || typeof str != "number"  ) {
+ return String(str).split('').reverse().join('');
 
 	}
 	else{

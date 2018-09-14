@@ -7,12 +7,20 @@
  */
 const getFlags = arr => {
 
- let obj1 = arr[0];
- let obj2  = arr[1];
+let newArr = [];
+let newArrss = [];
+ for(let i=0; i<arr.length; i++){
+ newArr.push(arr[i].flags.toString());
+	
+}
+let newArrs = newArr.toString().split(',');
+ for(let i=0; i<newArrs.length; i++){
+ newArrss.push(Number(newArrs[i]));
+	
+}
 
- let arr1 = obj1.flags;
- let arr2 = obj2.flags;
-return arr1.concat(arr2);
+return newArrss;
+
 
 };
 
