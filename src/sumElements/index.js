@@ -11,7 +11,18 @@
  * sumElements([Infinity, NaN, 1]); // 1
  */
 const sumElements = arr => {
-  /* your logic here...*/
+let newArrs = []
+let newArr = arr.filter(function(number) {
+   	if(number != Infinity){
+		return number;
+   	} 
+});
+  let sum = 0;
+ for(let i=0; i<newArr.length; i++){
+ 	sum += Number(newArr[i]); 
+  }
+   console.log(sum);
+  return sum;
 };
 
 export default sumElements;
